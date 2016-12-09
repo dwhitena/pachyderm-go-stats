@@ -1,10 +1,4 @@
-+++
-linktitle = "Pachyderm"
-date = "2016-12-13T00:00:00"
-author = [ "Daniel Whitenack" ]
-title = "Data Pipelines and Versioning with the Pachyderm Go Client"
-series = ["Advent 2016"]
-+++
+# Pachyderm pipeline example - Gathering Go project stats
 
 **What is Pachyderm?**
 
