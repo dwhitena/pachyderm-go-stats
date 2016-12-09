@@ -1,0 +1,27 @@
+{
+  "pipeline": {
+    "name": "stats"
+  },
+  "transform": {
+    "image": "dwhitena/stats",
+    "cmd": [ "/bin/bash" ],
+    "stdin": [
+        "for filename in /pfs/projects/*; do",
+		"REPONAME=`cat $filename`",
+		"source /stats.sh >> /pfs/out/results",	
+	"done"
+    ]
+  },
+  "parallelism_spec": {
+    "strategy": "CONSTANT",
+    "constant": "1"
+  },
+  "inputs": [
+    {
+      "repo": {
+        "name": "projects"
+      },
+      "method": "reduce"
+    }
+  ]
+}
